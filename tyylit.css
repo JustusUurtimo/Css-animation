@@ -1,0 +1,182 @@
+html, body, svg, canvas {
+   overflow: hidden;
+}
+
+.stop1 {
+   stop-color: black;  
+}
+
+.stop2 {
+   stop-color: yellow;  
+}
+
+.stop3 {
+   stop-color: black;  
+}
+
+
+body {background-color: black;}
+
+.canvas{
+   top: 0%;
+   left: calc(50% - 191.5px);
+   animation-duration: 4s;
+   animation-name: bunnyHead;
+   animation-delay: 500ms;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   position: absolute;
+   z-index: 1;
+}
+.canvas2{
+   top: 0%;
+   left: calc(50% - 191.5px);
+   animation-duration: 4s;
+   animation-name: bunnyTorso;
+   animation-delay: 500ms;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   position: absolute;
+   z-index: 1;
+}
+.bar {
+    animation-duration: 4s;
+    animation-name: bars;
+    animation-delay: 100ms;
+    width: 100vw;
+    height: 20%;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: absolute;
+    z-index: 1;
+}
+.owl {
+    animation-name: owl;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    z-index: 3;
+}
+.owl2 {
+    animation-name: owl2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    z-index: 3;
+}
+.owlButton{
+    position: absolute;
+    left: 90%;
+    z-index: 6;
+    top:0%;
+}
+.scrollTextCanvas{
+   position: absolute;
+    /*20px on puolet tekstin korkeudesta, jolloin se tulee keskelle*/
+   top: calc(50% - 20px);
+   z-index: 4;
+}
+
+.scrollSinusCanvas {
+    position: absolute;
+    top: 0%;
+    z-index: 5;
+}
+
+.snowflake {
+    animation-name: snowfall;
+    animation-duration: 5s;
+    position: absolute;
+    /*lumihiutale luodaan pohjalle, mutta animoidaan liikkumaan ylhäältä alas, näin animattion jälkeen se jää pohjalle*/
+    top: calc(100% - 30px);
+    z-index: 2;
+}
+
+@keyframes bars {
+  from {
+  /* alussa elementin vasen marginaali on 100% */
+    top: 100%;
+  }
+
+  to {
+  /* animoidaan kunnes vasen marginaali on 0% */
+    top: 0%;
+  }
+}
+@keyframes bunnyHead {
+  from {
+  /* alussa elementin vasen marginaali on 100% */
+    top: 0%;
+  }
+
+  to {
+  /* animoidaan kunnes vasen marginaali on 0% */
+    top: calc(50% - 300px);
+  }
+}
+@keyframes bunnyTorso {
+  from {
+  /* alussa elementin vasen marginaali on 100% */
+    top: calc(100% - 300px);
+  }
+
+  to {
+  /* animoidaan kunnes vasen marginaali on 0% */
+    top: 50%;
+  }
+}
+@keyframes owl {
+   from {
+     left: 0%;
+     top: 0%;     
+  }
+  25% {
+  left: calc(100% - 93px);
+  top: 0%;
+ } 
+  50% {
+  top: calc(100% - 95px);
+  left: calc(100% - 93px);
+ } 
+
+  75%{
+  top: calc(100% - 95px);
+  left: 0%;
+  }
+    to {
+  top: 0%;
+  left: 0%;
+  }
+}
+
+@keyframes owl2 {
+   from {
+     left: 0%;
+     top: 0%;     
+  }
+  25% {
+  top: calc(100% - 93px);
+  left: 0%;
+ } 
+  50% {
+  top: calc(100% - 93px);
+  left: calc(100% - 95px);
+ } 
+
+  75%{
+  left: calc(100% - 95px);
+  top: 0%;
+  }
+    to {
+  top: 0%;
+  left: 0%;
+  }
+}
+@keyframes snowfall {
+    from {top: 0%;
+    
+        }
+    to {
+            top: calc(100% - 30px);
+        }
+}

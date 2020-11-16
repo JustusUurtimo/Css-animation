@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head><!-- head-osan sisältöä ei saa muuttaa -->
+        <script src="http://appro.mit.jyu.fi/tiea2120/vt/vt1/2019/data.js"></script>
+        <script src="vt3.js"></script>
+        <link rel="StyleSheet" href="tyylit.css" type="text/css" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8"/>
+        <title>Pupuja jejee</title>
+    </head>
+    <body id = "body"><!-- Tämän tiedoston sisältöä saa muuttaa vapaasti tästä kommentista eteenpäin ! -->
+    <img src="http://appro.mit.jyu.fi/tiea2120/vt/vt4/owl.svg" alt="owl" id="owl" />    
+    <object id = "bar" type="image/svg+xml" data="grafiikka.svg"></object>  
+    <canvas class="canvas" id="canvas" width="500" height="300"></canvas>
+    <canvas class="canvas2" id="canvas2" width="500" height="300"></canvas>
+    <canvas class="scrollTextCanvas" id="scrollTextCanvas"></canvas>
+    <canvas class="scrollSinusCanvas" id="scrollSinusCanvas"></canvas>
+    <div id = "owlButton"></div>
+<script src="http://appro.mit.jyu.fi/tools/htmlinspector/html-inspector.js"></script>
+<script>// yksinkertaisin tapa kutsua inspectoria on: HTMLInspector.inspect()
+window.addEventListener("load",  function() { HTMLInspector.inspect( {domRoot: "html",useRules: null,excludeRules: ["script-placement"],excludeElements: "svg",excludeSubTrees: ["svg","iframe"],onComplete: function(errors) { errors.forEach(function(error) {console.warn(error.message, error.context)})}} );});</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jshint/2.11.0/jshint.js"></script>
+<script src="http://appro.mit.jyu.fi/tools/jshint/jshint.user.js"></script>
+</body>
+</html>
